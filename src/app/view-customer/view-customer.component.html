@@ -1,0 +1,54 @@
+<app-admin-navbar></app-admin-navbar>
+<br>
+<div class="flight-wrapper">
+  <div class="navbar">
+    <div class="logo">Admin</div>
+   
+  </div>
+ 
+  
+<div class="flight-table-container">
+<h2 align="center" style="color: rgb(69, 100, 110);;">Customers Details</h2>
+<br><br>
+
+
+<table class="flight-table" >
+  <thead>
+    <tr>
+      <th>User ID</th>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Address 1</th>
+      <th>Address 2</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Country</th>
+      <th>Zipcode</th>
+      <th>DOB</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of Users">
+      <td>{{item.userID}}</td>
+      <td>{{item.userName}}</td>
+      <td>{{item.customerCategory}}</td>
+      <td>{{item.phone}}</td>
+      <td>{{item.emailId}}</td>
+      <td>{{item.address1}}</td>
+      <td>{{item.address2}}</td>
+      <td>{{item.city}}</td>
+      <td>{{item.state}}</td>
+      <td>{{item.country}}</td>
+      <td>{{item.zipCode}}</td>
+      <td>{{item.dOB}}</td>
+
+    
+    </tr>
+  </tbody>
+  </table>
+</div>
+</div>
+
+<app-footer></app-footer>

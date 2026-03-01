@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="Login-form">
+            <h1>User Login</h1>
+    <form (ngSubmit)="onSubmit()" #userLoginForm="ngForm">
+
+  
+      User Id: <br />
+      <input
+        type="number"
+        class="input-field"
+        name="userId"
+        placeholder="User Id"
+        [(ngModel)]="userId"
+        (click) = "onClick()"
+        required
+      /><br />
+      Password: <br />
+      <input
+        type="password"
+        class="input-field"
+        name="password"
+        placeholder="Password"
+        [(ngModel)]="password"
+         (click) = "onClick()"
+        required
+      /><br />
+      <div style="color: rgb(255, 0, 0); font-weight: bold;">{{message}}</div><br />
+  
+      <input
+        type="submit"
+        class="input-field-submit"
+        value="Login"
+      /><br /><br />
+
+      <b>New user? <a (click) = "onRegister()" class = "register">Register Yourself</a></b>
+    </form>
+  </div>
+
+</div>
+

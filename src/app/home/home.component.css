@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    background-color:rgb(143, 189, 204);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: absolute 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+  }
+  
+  header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 25px 20px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .admin-button,
+  .login-button {
+    padding: 8px 16px;
+    background-color:burlywood;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin:  5px;
+  }
+  
+  .admin-button:hover,
+  .login-button:hover {
+    background-color:darkblue;
+  }
+  
+  .overlay {
+    font-size: 25px;
+    padding-top:250px ;
+    background-color:rgb(143, 189, 204);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    top: 400px;
+  }
+  
+  .welcome-text {
+    font-size: 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    color: #222;
+    padding: 12px 24px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  .main-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .main-btn {
+    background-color:burlywood;
+    color: #333;
+    padding: 15px 40px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 250px;
+    border-radius: 4px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+  
+  .main-btn:hover {
+    background-color: #ddd;
+  }
+
+  .tagline{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+  }

@@ -1,0 +1,55 @@
+
+
+<div class="header">
+    <div class="nav-left">
+        <a routerLink="/admin-dashboard">Home</a>
+        <!-- <a href="#">Home</a>
+   -->
+        <div class="dropdown">
+            <button class="dropbtn">Flight</button>
+            <div class="dropdown-content">
+                <a href="/add-flight">Add Flight</a>
+                <a href="/edit-flight">Edit Flight</a>
+                <a href="/delete-flight">Delete Flight</a>
+                <a href="/view-flight">View Flight</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Carrier</button>
+            <div class="dropdown-content">
+                <a href="/add-carrier">Add Carrier</a>
+                <a href="/edit-carrier">Edit Carrier</a>
+                <a href="/delete-carrier">Delete Carrier</a>
+                <a href="/view-carrier">View Carrier</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Flight Schedule</button>
+            <div class="dropdown-content">
+                <a href="/add-flight-schedule">Add Schedule</a>
+                <a href="/view-flight-schedule">View Schedule</a>
+            </div>
+        </div>
+        <a href="/view-customer">View Customers</a>
+        <a href="/view-booking">View Bookings</a>
+
+
+    </div>
+    <div class="nav-right">
+        <a href="#" (click)="showAlertBox($event)">Logout</a>
+    </div>
+
+<div class="custom-alert" *ngIf="showAlert">
+  <div class="custom-alert-box">
+    <h6>Are you sure you want to logout?</h6>
+    <button (click)="logout()">Yes</button>
+    <button (click)="cancel()">No</button>
+  </div>
+</div>
+</div>
+
+
+
+

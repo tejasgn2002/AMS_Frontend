@@ -1,0 +1,91 @@
+
+<button type="submit" (click)="onBack()"> Back To Home</button>
+<div class="page-container"></div>
+
+<h1 class="heading">Flight Booking ✈︎ </h1>
+
+<div class="flight-booking-container">
+
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <label> Origin:</label>
+        </td>
+        <td>
+          <select class="input-field" name="origin" [(ngModel)]="origin" required (change)="filterFlights()">
+            <option value="">Select Origin</option>
+            <option *ngFor="let loc of locations" [value]="loc">{{loc}}</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label> Destination:</label>
+        </td>
+        <td>
+          <select class="input-field" name="destination" [(ngModel)]="destination" required (change)="filterFlights()">
+            <option value="">Select Destination</option>
+            <option *ngFor="let loc of locations" [value]="loc">{{loc}}</option>
+          </select>
+        </td>
+      </tr>
+      <br>
+      <tr>
+        <td>
+          <label> Date:</label>
+        </td>
+        <td>
+          <input class="input-field-date" type="date" name="travelDate" [(ngModel)]="travelDate" required
+            (change)="filterFlights()">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="filteredFlights.length > 0">
+    <h3>Available Flights:</h3>
+    <ul>
+      <li *ngFor="let flight of filteredFlights">
+        <input type="radio" name="selectedFlight" [(ngModel)]="flightId" [value]="flight.flightId">
+        FlightID: {{flight.flightId}} ({{flight.origin}} ᯓ ✈︎ {{flight.destination}})
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="flightId">
+
+    <div class="form-container">
+      <h2 class="form-title">Flight Booking</h2>
+      <div class="form-grid">
+        <div class="form-left">
+          <label>Flight ID :</label>
+          <input type="number" [(ngModel)]="flightId" [value]="flightId" disabled/>
+
+          <label>No. of seats:</label>
+          <input type="number" [(ngModel)]="numSeats" (click)="onchange()"/>
+
+
+        </div>
+
+        <div class="form-right">
+          <label>Booking Amount:</label>
+          <input type="number" [(ngModel)]="bookingAmount" />
+          <label>Seat Category:</label>
+          <select name="Class" [(ngModel)]="seatCategory" (click)="onchange()">
+            <option value="Economy">Economy</option>
+            <option value="Executive">Executive</option>
+            <option value="Business">Business</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- Add Flight button here -->
+    <div class="form-button" *ngIf="bookingAmount === 0">
+      <button type="submit" (click)="amount()">Calculate Amount</button>
+    </div>
+    <div class="form-button" *ngIf="bookingAmount !== 0">
+      <button type="submit" (click)="onSubmit()">Book Flight</button>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,49 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="flight-wrapper">
+  <div class="navbar">
+    <div class="logo">Admin</div>
+
+  </div>
+
+  <div class="form-container">
+    <h2 class="form-title">Add New Flight</h2>
+    <div class="form-grid">
+      <div class="form-left">
+        
+
+        <label>Carrier ID :</label>
+        <input type="number" [(ngModel)]="carrierID" />
+
+        <label>Origin:</label>
+        <input type="text" [(ngModel)]="origin" />
+
+        <label>Destination:</label>
+        <input type="text" [(ngModel)]="destination"/>
+        
+        <label>Airfare:</label>
+        <input type="number" [(ngModel)]="airFare" />
+      </div>
+
+      <div class="form-right">
+        
+
+        <label>Economy Seats (Min 20):</label>
+        <input type="number" [(ngModel)]="seatCapacityEconomyClass"/>
+
+        <label>Business Seats (Min 10):</label>
+        <input type="number" [(ngModel)]="seatCapacityBusinessClass"/>
+
+        <label>Executive Seats (Min 5):</label>
+        <input type="number" [(ngModel)]="seatCapacityExecutiveClass"/>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Add Flight button here -->
+  <div class="form-button">
+    <button type="submit" (click)="addFlight()">Add Flight</button>
+  </div>
+</div>
+
+<app-footer></app-footer>

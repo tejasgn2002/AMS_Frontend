@@ -1,0 +1,43 @@
+<app-admin-navbar></app-admin-navbar>
+<br>
+
+<div class="flight-wrapper">
+  <div class="navbar">
+    <div class="logo">Admin</div>
+   
+  </div>
+
+<div class="flight-table-container">
+<h2 align="center" style="color: rgb(69, 100, 110);">Booking Details</h2>
+<br><br>
+
+<table class="booking-table">
+  <thead>
+    <tr>
+      <th>Booking ID</th>
+      <th>Flight ID</th>
+      <th>User ID</th>
+      <th>No. of Seats</th>
+      <th>Seat Category</th>
+      <th>Date of Travel</th>
+      <th>Booking Status</th>
+      <th>Booking Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of bookings">
+      <td>{{item.bookingID}}</td>
+      <td>{{item.flightID}}</td>
+      <td>{{item.userID}}</td>
+      <td>{{item.noOfSeats}}</td>
+      <td>{{item.seatCategory}}</td>
+      <td>{{item.dateOfTravel}}</td>
+      <td>{{item.bookingStatus}}</td>
+      <td>{{item.bookingAmount}}</td>
+    </tr>
+  </tbody>
+  </table>
+</div>
+</div>
+
+<app-footer></app-footer>

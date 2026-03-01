@@ -1,0 +1,59 @@
+
+<app-admin-navbar></app-admin-navbar>
+<div class="flight-wrapper">
+    <div class="navbar">
+      <div class="logo">Admin</div>
+      <!-- <ul>
+        <li><a routerLink="/add-flight">Add Flight</a></li>
+      </ul> -->
+    </div>
+
+<!-- <div class="container">
+    <h2 class="page-title">View Carrier Details</h2>
+   -->
+
+     <div class="flight-table-container">
+      <h2 class="page-title">View Carrier Details</h2>
+  
+      <table class="flight-table" *ngIf="Carriers && Carriers.length > 0; else noFlights">
+        <thead>
+          <tr>
+            <th>Carrier ID</th>
+            <th>Carrier Name</th>
+            <th>Advance Booking Discounts 30 Days</th>
+            <th>Advance Booking Discounts 60 Days</th>
+            <th>Advance Booking Discounts 90 Days</th>
+            <th>Bulk Booking Discount</th>
+            <th>Refund Percentages 2 Days Before</th>
+            <th>Refund Percentages 10 Days Before</th>
+            <th>Refund Percentages 20 Days Before</th>
+            <th>Silver User Discount</th>
+            <th>Gold User Discount</th>
+            <th>Platinum User Discount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let Carrier of Carriers">
+            <td>{{ Carrier.carrierId }}</td>
+            <td>{{ Carrier.carrierName }}</td>
+            <td>{{ Carrier.discountPercentageThirtyDaysAdvanceBooking }}</td>
+            <td>{{ Carrier.discountPercentageSixtyDaysAdvanceBooking}}</td>
+            <td>{{ Carrier.discountPercentageNinteyDaysAdvanceBooking }}</td>
+            <td>{{ Carrier.bulkBookingDiscount }}</td>
+            <td>{{ Carrier.refundPercentageForTicketCancellation2DaysBeforeTravelDate}}</td>
+            <td>{{ Carrier.refundPercentageForTicketCancellation10DaysBeforeTravelDate }}</td>
+            <td>{{ Carrier.refundPercentageForTicketCancellation20DaysOrMoreBeforeTravelDate }}</td>
+            <td>{{ Carrier.silverUserDiscount}}</td>
+            <td>{{ Carrier.goldUserDiscount }}</td>
+            <td>{{ Carrier.platinumUserDiscount}}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <ng-template #noFlights>
+        <p class="no-data">No flights available.</p>
+      </ng-template>
+    </div>
+
+
+  <app-footer></app-footer>

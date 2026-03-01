@@ -1,0 +1,47 @@
+<app-admin-navbar></app-admin-navbar>
+
+<div class="flight-wrapper">
+    <div class="navbar">
+      <div class="logo">Admin</div>
+     
+    </div>
+  
+    <div class="form-container">
+      <h2 class="form-title">Add New Flight Schedule</h2>
+       <div class="form-grid">
+        <div class="form-left">
+          
+          <label>Flight ID:</label>
+          <input type="number" [(ngModel)]="flightID"/>
+
+          <label>Date Of Travel:</label>
+          <input type="date" [(ngModel)]="dateOfTravel" />
+    
+          <label>Economy Class Booked Count:</label>
+          <input type="number" [(ngModel)]="economyClassBookedCount" />
+
+
+        </div>
+    
+        <div class="form-right">
+
+          <label>Business Class Booked Count:</label>
+          <input type="number" [(ngModel)]="businessClassBookedCount" />
+
+          <label>Executive Class Booked Count:</label>
+          <input type="number" [(ngModel)]="executiveClassBookedCount" />
+  
+        </div>
+      </div>
+    </div>
+     
+    
+      <!-- Add button  -->
+      <div class="form-button">
+        <button type="submit" (click)="onSchedule()">Add Schedule</button>
+      </div>
+    </div>
+    
+    <app-footer></app-footer>
+    
+    

@@ -1,0 +1,61 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="flight-wrapper">
+    <div class="navbar">
+      <div class="logo">Admin</div>
+     
+    </div>
+  
+    <div class="form-container">
+        <h2 class="form-title">Edit Flight</h2>
+    
+        <!-- 🔍 Search Flight ID -->
+        <div style="text-align: center; margin-bottom: 20px;">
+          <input
+            type="text"
+            placeholder="Enter Flight ID to search"
+            [(ngModel)]="searchFlightId"
+            style="padding: 10px; width: 60%; border: 1px solid #ccc; border-radius: 4px;"
+          />
+          <button (click)="searchFlight()" style="margin-left: 10px; padding: 10px 20px;">
+            Search
+          </button>
+        </div>
+    
+        <form #form="ngForm">
+          <div class="form-grid">
+            <div class="form-left">
+              <label>Flight ID:</label>
+              <input type="text" [(ngModel)]="flight.flightID" name="flightId" />
+    
+              <label>Carrier ID :</label>
+              <input type="text" [(ngModel)]="flight.carrierID" name="carrierId" />
+    
+              <label>Origin:</label>
+              <input type="text" [(ngModel)]="flight.origin" name="origin" />
+    
+              <label>Destination:</label>
+              <input type="text" [(ngModel)]="flight.destination" name="destination" />
+            </div>
+    
+            <div class="form-right">
+              <label>Airfare:</label>
+              <input type="number" [(ngModel)]="flight.airFare" name="airfare" />
+    
+              <label>Economy Seats (Min 20):</label>
+              <input type="number" [(ngModel)]="flight.seatCapacityEconomyClass" name="economySeats" />
+    
+              <label>Business Seats (Min 10):</label>
+              <input type="number" [(ngModel)]="flight.seatCapacityBusinessClass" name="businessSeats" />
+    
+              <label>Executive Seats (Min 5):</label>
+              <input type="number" [(ngModel)]="flight.seatCapacityExecutiveClass" name="executiveSeats" />
+            </div>
+          </div>
+    
+          <div class="form-button">
+            <button type="submit" (click)="saveFlight()" >Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+<app-footer></app-footer>

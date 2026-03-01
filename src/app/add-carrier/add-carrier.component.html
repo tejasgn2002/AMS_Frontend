@@ -1,0 +1,75 @@
+<app-admin-navbar></app-admin-navbar>
+
+<div class="flight-wrapper">
+    <div class="navbar">
+      <div class="logo">Admin</div>
+    </div>
+    <div class="form-container">
+      <h2>Add Carrier</h2>
+    
+        <!-- Carrier Name -->
+        <div class="form-row">
+          <label for="carrier-name">Carrier Name:</label>
+          <input type="text" id="carrier-name" placeholder="Enter Carrier Name" [(ngModel)]="carrierName"/>
+        </div>
+    
+        <!-- Refund Percentages -->
+        <div class="section-title">Refund Percentages</div>
+        <div class="form-subsection">
+          <div class="form-row">
+            <label>2 Days Before:</label>
+            <input type="number" [(ngModel)]="refundPercentageForTicketCancellation2DaysBeforeTravelDate"  placeholder="0 - 75%" />
+          </div>
+          <div class="form-row">
+            <label>10 Days Before:</label>
+            <input type="number" [(ngModel)]="refundPercentageForTicketCancellation10DaysBeforeTravelDate" placeholder="0 - 90%"  />
+          </div>
+          <div class="form-row">
+            <label>20 Days Before:</label>
+            <input type="number" [(ngModel)]="refundPercentageForTicketCancellation20DaysOrMoreBeforeTravelDate" placeholder="0 - 95%" />
+          </div>
+        </div>
+    
+        <!-- User Discounts -->
+        <div class="section-title">User Discounts</div>
+        <div class="form-subsection">
+          <div class="form-row">
+            <label>Bulk Booking:</label>
+            <input type="number" [(ngModel)]="bulkBookingDiscount" placeholder="0 - 20%" />
+          </div>
+          <div class="form-row">
+            <label>Silver User:</label>
+            <input type="number" [(ngModel)]="silverUserDiscount" placeholder="0 - 5%" />
+          </div>
+          <div class="form-row">
+            <label>Gold User:</label>
+            <input type="number" [(ngModel)]="goldUserDiscount" placeholder="0 - 10%" />
+          </div>
+          <div class="form-row">
+            <label>Platinum User:</label>
+            <input type="number" [(ngModel)]="platinumUserDiscount" placeholder="0 - 15%" />
+          </div>
+        </div>
+    
+        <!-- Advance Booking Discounts -->
+        <div class="section-title">Advance Booking Discounts</div>
+        <div class="form-subsection">
+          <div class="form-row">
+            <label>30 Days:</label>
+            <input type="text" [(ngModel)]="discountPercentageThirtyDaysAdvanceBooking" placeholder="0 - 5%" />
+          </div>
+          <div class="form-row">
+            <label>60 Days:</label>
+            <input type="text" [(ngModel)]="discountPercentageSixtyDaysAdvanceBooking" placeholder="0 - 10%" />
+          </div>
+          <div class="form-row">
+            <label>90 Days:</label>
+            <input type="text" [(ngModel)]="discountPercentageNinteyDaysAdvanceBooking" placeholder="0 - 15%" />
+          </div>
+        </div>
+    
+        <!-- Submit Button -->
+        <div class="button-container">
+          <input type="submit" class="save-button" value="Submit" (click)="submitForm()" />
+        </div>
+    </div>

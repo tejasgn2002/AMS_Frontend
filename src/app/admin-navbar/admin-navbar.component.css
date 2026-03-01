@@ -1,0 +1,104 @@
+/* Header Layout */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(143, 189, 204);
+    padding: 10px 10px;
+    color: white;
+    height: 50px;
+  }
+  
+  /* Navigation Links */
+  .nav-left a,
+  .nav-right a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+     padding: 40px 20px;
+  }
+  
+  .nav-right {
+    display: flex;
+    align-items: right;
+  }
+  
+  /* Dropdown for Flight */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    background-color: rgb(143, 189, 204);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-right: 15px;
+    padding: 20px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 200px;
+    z-index: 1;
+    flex-direction: column;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 8px 12px;
+    display: block;
+    text-decoration: none;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+ 
+.custom-alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+
+.custom-alert-box {
+  background-color: white;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  padding: 30px 40px;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgb(143, 189, 204);
+}
+
+
+.custom-alert-box button {
+  margin: 10px;
+  padding: 15px 28px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 0px;
+  border-radius: 10px;
+  background-color: rgb(143, 189, 204);
+}
+
+
+

@@ -1,0 +1,86 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="flight-wrapper">
+  <div class="navbar">
+    <div class="logo">Admin</div>
+  </div>
+  <div class="form-container">
+    <h2>Edit Carrier</h2>
+
+    <!-- Standalone Search Bar -->
+    <div class="form-row">
+      <input type="number" [(ngModel)]="searchCarrierId" id="search-carrier-id"
+        placeholder="Enter Carrier ID to search" />
+      <button class="search-button" (click)="onSearch()">Search</button>
+    </div>
+
+    <div class="form-row">
+      <label for="carrier-name">Carrier ID:</label>
+      <input type="number" id="carrier-name" placeholder="Enter Carrier ID"  [(ngModel)]="carrier.carrierId"/>
+    </div>
+
+    <!-- Carrier Name -->
+    <div class="form-row">
+      <label for="carrier-name">Carrier Name:</label>
+      <input type="text" id="carrier-name" placeholder="Enter Carrier Name" [(ngModel)]="carrier.carrierName"/>
+    </div>
+
+    <!-- Refund Percentages -->
+    <div class="section-title">Refund Percentages</div>
+    <div class="form-subsection">
+      <div class="form-row">
+        <label>2 Days Before:</label>
+        <input type="text" placeholder="0 - 75%" [(ngModel)]="carrier.refundPercentageForTicketCancellation2DaysBeforeTravelDate"/>
+      </div>
+      <div class="form-row">
+        <label>10 Days Before:</label>
+        <input type="text" placeholder="0 - 90%" [(ngModel)]="carrier.refundPercentageForTicketCancellation10DaysBeforeTravelDate"/>
+      </div>
+      <div class="form-row">
+        <label>20 Days Before:</label>
+        <input type="text" placeholder="0 - 95%" [(ngModel)]="carrier.refundPercentageForTicketCancellation20DaysOrMoreBeforeTravelDate"/>
+      </div>
+    </div>
+
+    <!-- User Discounts -->
+    <div class="section-title">User Discounts</div>
+    <div class="form-subsection">
+      <div class="form-row">
+        <label>Bulk Booking:</label>
+        <input type="number" placeholder="0 - 20%" [(ngModel)]="carrier.bulkBookingDiscount"/>
+      </div>
+      <div class="form-row">
+        <label>Silver User:</label>
+        <input type="text" placeholder="0 - 5%" [(ngModel)]="carrier.silverUserDiscount"/>
+      </div>
+      <div class="form-row">
+        <label>Gold User:</label>
+        <input type="text" placeholder="0 - 10%" [(ngModel)]="carrier.goldUserDiscount"/>
+      </div>
+      <div class="form-row">
+        <label>Platinum User:</label>
+        <input type="text" placeholder="0 - 15%" [(ngModel)]="carrier.platinumUserDiscount"/>
+      </div>
+    </div>
+
+    <!-- Advance Booking Discounts -->
+    <div class="section-title">Advance Booking Discounts</div>
+    <div class="form-subsection">
+      <div class="form-row">
+        <label>30 Days:</label>
+        <input type="text" placeholder="0 - 5%" [(ngModel)]="carrier.discountPercentageThirtyDaysAdvanceBooking"/>
+      </div>
+      <div class="form-row">
+        <label>60 Days:</label>
+        <input type="text" placeholder="0 - 10%" [(ngModel)]="carrier.discountPercentageSixtyDaysAdvanceBooking"/>
+      </div>
+      <div class="form-row">
+        <label>90 Days:</label>
+        <input type="text" placeholder="0 - 15%" [(ngModel)]="carrier.discountPercentageNinteyDaysAdvanceBooking"/>
+      </div>
+    </div>
+
+    <!-- Save Button -->
+    <div class="button-container">
+      <button class="save-button" (click)="onSave()">Save</button>
+    </div>
+  </div>

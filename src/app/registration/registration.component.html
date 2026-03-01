@@ -1,0 +1,135 @@
+<div class="container">
+    <div class="register-form">
+        <h1 align="center">Registration Form</h1>
+        <form align="center" #userRegistrationForm="ngForm" (ngSubmit)="onRegister()">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            FirstName<span style="color: red;">*</span>:
+                        </td>
+                        <td>
+                            <input class="input-field" type="text" name="FirstName" [(ngModel)]="FirstName"
+                                placeholder="FirstName" (click)="onClick()">
+                        </td>
+                        <td>
+                            LastName<span style="color: red;">*</span>:
+                        </td>
+                        <td>
+                            <input class="input-field" type="text" name="LastName" [(ngModel)]="LastName"
+                                placeholder="LastName" (click)="onClick()">
+                        </td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>
+                            Password<span style="color: red;">*</span>:
+                        </td>
+                        <td>
+                            <input class="input-field" type="text" name="Password" [(ngModel)]="Password"
+                                placeholder="Password" (click)="onClick()" >
+                        </td>
+                        <td>
+                            Contact No.<span style="color: red;">*</span>:
+                        </td>
+                        <td>
+                            <input class="input-field" type="number" name="Contact" [(ngModel)]="Contact"
+                                placeholder="Contact Number" (click)="onClick()">
+                        </td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>
+                            Email ID<span style="color: red;">*</span>:
+                        </td>
+                        <td>
+                            <input class="input-field" type="email" required name="Email" [(ngModel)]="Email"
+                                placeholder="Email-ID" (click)="onClick()">
+                        </td>
+                        <td>
+                            Address 1<span style="color: red;">*</span>:
+                        </td>
+                        <td>
+                            <input class="input-field" type="text" name="Address" [(ngModel)]="Address1"
+                                placeholder="Address" (click)="onClick()">
+                        </td>
+                    </tr>
+
+                    <br>
+                    <tr>
+                        <td>
+                            Address 2<span style="color: red;">*</span>:
+                        </td>
+                        <td>
+                            <input class="input-field" type="text" name="Address" [(ngModel)]="Address2"
+                                placeholder="Address" (click)="onClick()">
+                        </td>
+                        <td>
+                            City<span style="color: red;">*</span>:
+                        </td>
+                        <td>
+                            <input class="input-field" type="text" name="City" [(ngModel)]="City" placeholder="City"
+                                (click)="onClick()">
+                        </td>
+                    </tr>
+
+                    <br>
+                    <tr>
+                        <td>
+                            State<span style="color: red;">*</span>:
+                        </td>
+                        <td>
+                            <input class="input-field" type="text" name="State" [(ngModel)]="State" placeholder="State"
+                                (click)="onClick()">
+                        </td>
+                        <td>
+                            Country<span style="color: red;">*</span>:
+                        </td>
+                        <td>
+                            <input class="input-field" type="text" name="Country" [(ngModel)]="Country"
+                                placeholder="Country" (click)="onClick()">
+                        </td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>
+                            ZipCode<span style="color: red;">*</span>:
+                        </td>
+                        <td>
+                            <input class="input-field" type="number" name="ZipCode" [(ngModel)]="ZipCode"
+                                placeholder="ZipCode" (click)="onClick()">
+                        </td>
+                        <td>
+                            DOB<span style="color: red;">*</span>:
+                        </td>
+                        <td>
+                            <input id="DOB" class="input-field" type="date" [(ngModel)]="DOB" name="DOB"
+                                (click)="onClick()">
+                        </td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>
+                            Category<span style="color: red;">*</span>:
+                        </td>
+                        <td>
+                            <select name="Class" class="input-field" [(ngModel)]="Category">
+                                <option value="Platinum">Platinum</option>
+                                <option value="Silver">Silver</option>
+                                <option value="Gold">Gold</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <br>
+                </tbody>
+            </table>
+            <div style="color: rgb(255, 0, 0); font-weight: bold;">{{message}}</div>
+            <div style="color: rgb(8, 253, 90); font-weight: bold;">{{greenMessage}}</div>
+            <br>
+            <input class="input-field-submit" type="submit" value="Register">
+
+            <input class="input-field-submit" type="reset" value="Reset"> <br>
+            Already Registred? <a class="login" href="/user-login" >Login</a>
+        </form>
+    </div>
+</div>

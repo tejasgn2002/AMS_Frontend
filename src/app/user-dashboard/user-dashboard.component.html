@@ -1,0 +1,147 @@
+<header id="head" class="head">
+    <div>
+        <a (click)="onHome()">Home</a>
+        <a (click)="onProfile()">My Profile</a>
+        <a (click)="onMyTrip()">My Trips &#9992;</a>
+        <a (click)="onLogout()">Logout</a>
+    </div>
+    <div>
+        <p style="color: white;">Wellcome!! {{user.userName}} .</p>
+    </div>
+
+</header>
+<div [ngSwitch]="placeHolder" class="profile-container">
+    <!-- Home -->
+    <div class="main-container" *ngSwitchCase="0">
+        <h1 style="color: white;">Welcome to Airline Management System</h1>
+    </div>
+    <!-- My Profile -->
+    <div *ngSwitchCase="1">
+        <div class="profile">
+            <div class="register-form">
+                <H1 align="center">My Profile</H1>
+                <form align="center" #userProfileForm="ngForm">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Name<span style="color: red;">*</span>:
+                                </td>
+                                <td>
+                                    <input [disabled]="!isEditable" class="input-field" type="text" placeholder="Name"
+                                        [(ngModel)]="user.userName" [ngModelOptions]="{standalone: true}">
+                                </td>
+                                <td>
+                                    ZipCode<span style="color: red;">*</span>:
+                                </td>
+                                <td>
+                                    <input [disabled]="!isEditable" class="input-field" type="number" name="ZipCode"
+                                        placeholder="ZipCode" [(ngModel)]="user.zipCode">
+                                </td>
+                            </tr>
+                            <br>
+                            <tr>
+                                <td>
+                                    DOB<span style="color: red;">*</span>:
+                                </td>
+                                <td>
+                                    <input [disabled]="!isEditable" class="input-field" type="text"
+                                        [(ngModel)]="user.dOB" [ngModelOptions]="{standalone: true}">
+                                </td>
+                                <td>
+                                    Contact No.<span style="color: red;">*</span>:
+                                </td>
+                                <td>
+                                    <input [disabled]="!isEditable" class="input-field" type="number" name="Contact"
+                                        placeholder="Contact Number" [(ngModel)]="user.phone">
+                                </td>
+                            </tr>
+                            <br>
+                            <tr>
+                                <td>
+                                    Email ID<span style="color: red;">*</span>:
+                                </td>
+                                <td>
+                                    <input [disabled]="!isEditable" class="input-field" type="email" required
+                                        name="Email" placeholder="Email-ID" [(ngModel)]="user.emailId">
+                                </td>
+                                <td>
+                                    Address 1<span style="color: red;">*</span>:
+                                </td>
+                                <td>
+                                    <input [disabled]="!isEditable" class="input-field" type="text" name="Address"
+                                        placeholder="Address" [(ngModel)]="user.address1">
+                                </td>
+                            </tr>
+
+                            <br>
+                            <tr>
+                                <td>
+                                    Address 2<span style="color: red;">*</span>:
+                                </td>
+                                <td>
+                                    <input [disabled]="!isEditable" class="input-field" type="text" name="Address"
+                                        placeholder="Address" [(ngModel)]="user.address2">
+                                </td>
+                                <td>
+                                    City<span style="color: red;">*</span>:
+                                </td>
+                                <td>
+                                    <input [disabled]="!isEditable" class="input-field" type="text" name="City"
+                                        placeholder="City" [(ngModel)]="user.city">
+                                </td>
+                            </tr>
+
+                            <br>
+                            <tr>
+                                <td>
+                                    State<span style="color: red;">*</span>:
+                                </td>
+                                <td>
+                                    <input [disabled]="!isEditable" class="input-field" type="text" name="State"
+                                        placeholder="State" [(ngModel)]="user.state">
+                                </td>
+                                <td>
+                                    Country<span style="color: red;">*</span>:
+                                </td>
+                                <td>
+                                    <input [disabled]="!isEditable" class="input-field" type="text" name="Country"
+                                        placeholder="Country" [(ngModel)]="user.country">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <button class="input-field-submit" (click)="onEdit()">Edit</button>
+                    <button class="input-field-submit" (click)="onSave()">Save</button>
+                    <!-- <button></button>
+                    <input class="input-field-submit" type="submit" value="Save"  > <br> -->
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- My Trip -->
+    <div class="dashboard-container" *ngSwitchCase="2">
+        <div class="marquee-container">
+            <marquee behavior="scroll" direction="right" scrollamount="16" class="flight-marquee">
+                ✈︎ Fly High with AMS ✈︎
+            </marquee>
+        </div>
+        <div class="trips-dashboard">
+            <div class="button-box-container">
+                <div class="button-box">
+                    <button (click)="goToFlightBooking()">Book a Flight </button>
+                </div>
+
+                <div class="button-box">
+
+                    <button (click)="goToUserBookings()">View Bookings</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

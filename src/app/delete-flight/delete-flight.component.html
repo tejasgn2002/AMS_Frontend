@@ -1,0 +1,31 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="flight-wrapper">
+    <div class="navbar">
+      <div class="logo">Admin</div>
+      <!-- <ul>
+        <li><a routerLink="/add-flight">Add Flight</a></li>
+      </ul> -->
+    </div>
+  
+    <div class="form-container">
+      <h2>Delete Flight</h2>
+
+        <label for="flightId">Enter Flight ID to delete:
+        <input type="number" [(ngModel)]="flightIdToDelete" name="flightId"  />
+      </label>
+  
+      <button (click)="deleteFlight()">Delete Flight</button>
+  
+      <ul *ngIf="flights.length > 0">
+        <li *ngFor="let flight of flights">
+          {{ flight.flightID }}: {{ flight.origin }} → {{ flight.destination }}
+        </li>
+      </ul>
+
+  
+      <div *ngIf="flights.length === 0" class="empty">No flights available.</div>
+    </div>
+  </div>
+
+<app-footer></app-footer>
+  

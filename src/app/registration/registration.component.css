@@ -1,0 +1,109 @@
+/* Container styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: powderblue;
+    padding: 20px;
+}
+
+/* Registration form card */
+.register-form {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Heading */
+.register-form h1 {
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    color: #333;
+}
+
+/* Table styling */
+.register-form table {
+    width: 100%;
+    border-spacing: 15px;
+}
+
+.register-form td {
+    padding: 8px;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+}
+
+/* Input fields */
+.input-field {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0px 0px 5px rgba(74,144,226,0.4);
+}
+
+/* Submit and reset buttons */
+.input-field-submit {
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 8px 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-field-submit:hover {
+    background-color: #3c7cc0;
+}
+
+/* Select dropdown */
+select.input-field {
+    appearance: none;
+    background: #fff;
+    cursor: pointer;
+}
+
+/* Login link */
+.login {
+    color: #4a90e2;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .register-form table,
+    .register-form tbody,
+    .register-form tr,
+    .register-form td {
+        display: block;
+        width: 100%;
+    }
+    
+    .register-form td {
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,44 @@
+<div class="form-button">
+  <button type="submit" (click)="onBack()"> Back To Home</button>
+</div>
+<div class="booking-view-container">
+  <h2>Your Bookings</h2>
+
+  <div *ngIf="message" class="message-box">
+    {{message}}
+  </div>
+
+
+  <div *ngFor="let booking of flightBooking" class="booking-card">
+    <p><strong>Booking ID:</strong> {{ booking.bookingID }}</p>
+    <p><strong>Flight ID:</strong>{{booking.flightID}}</p>
+    <div *ngFor="let fligts of flight">
+      <span *ngIf="fligts.flightID === booking.flightID">
+        <p><strong>Origin:</strong>{{fligts.origin}}</p>
+        <p><strong>Destination:</strong>{{fligts.destination}}</p>
+      </span>
+    </div>
+    <p><strong>Passenger Name:</strong> {{ user.userName }}</p>
+    <p><strong>No. of Seats:</strong> {{ booking.noOfSeats }}</p>
+    <p><strong>Seat Category:</strong> {{ booking.seatCategory }}</p>
+    <p><strong>Date of Travel:</strong> {{ booking.dateOfTravel }}</p>
+    <p><strong>Booking Amount:</strong> ₹{{ booking.bookingAmount }}</p>
+    <p><strong>Status:</strong> {{ booking.bookingStatus }}</p>
+
+    <button *ngIf="booking.bookingStatus === 'Booked'" (click)="cancelBooking(booking)" class="cancel-button">
+      Cancel Booking
+    </button>
+  </div>
+
+
+  <div *ngIf="flightBooking.length == 0">
+    <h3 style="color: red;" align="center">No bookings found...</h3>
+  </div>
+
+  <h3>Rules</h3>
+  <ul>
+    <li>Booking is confirmed only after successful payment.</li>
+    <li>Changes in seat category may affect total fare.</li>
+    <li>Cancellations must be done at least 24 hours before travel.</li>
+  </ul>
+</div>

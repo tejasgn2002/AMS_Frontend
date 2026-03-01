@@ -1,0 +1,45 @@
+<app-admin-navbar></app-admin-navbar>
+
+<div class="flight-wrapper">
+    <div class="navbar">
+      <div class="logo">Admin Panel</div>
+      
+    </div>
+  
+    <div class="flight-table-container">
+      <h2>Available Flights</h2>
+  
+      <table class="flight-table" *ngIf="flights && flights.length > 0; else noFlights">
+        <thead>
+          <tr>
+            <th>Flight ID</th>
+            <th>Carrier ID</th>
+            <th>Origin</th>
+            <th>Destination</th>
+            <th>Airfare</th>
+            <th>Economy Seats</th>
+            <th>Business Seats</th>
+            <th>Executive Seats</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let flight of flights">
+            <td>{{ flight.flightID }}</td>
+            <td>{{ flight.carrierID }}</td>
+            <td>{{ flight.origin }}</td>
+            <td>{{ flight.destination }}</td>
+            <td>{{ flight.airFare }}</td>
+            <td>{{ flight.seatCapacityEconomyClass }}</td>
+            <td>{{ flight.seatCapacityBusinessClass }}</td>
+            <td>{{ flight.seatCapacityExecutiveClass }}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <ng-template #noFlights>
+        <p class="no-data">No flights available.</p>
+      </ng-template>
+    </div>
+  </div>
+<app-footer></app-footer>
+

@@ -1,0 +1,211 @@
+.head{
+    background-color: black;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+
+}
+a{
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.main-container{
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.head{
+    background-color: black;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.profile-container{
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    background-color: teal;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.register-form{
+    width: 820px;
+    border: 2px;
+    box-shadow: 0 1px 5px #deebeb;
+    border-radius:  5px;
+    padding: 20px;
+    justify-items: center;
+    background-color: rgb(237, 236, 236);
+    position: absolute;
+    right: 23%;
+    top: 20%;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    background-color: teal;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+}
+.input-field{
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: solid 1px;
+    margin-left: 30px;
+    padding-left: 10px;
+}
+.input-field-submit{
+    padding: 10px;
+    border-radius: 2px;
+    width: 100px;
+    border: none;
+    background-color: dodgerblue;
+    color: white;
+    cursor: pointer;
+    margin: 20px;
+}
+.input-field-submit:hover{
+    opacity: 0.5;
+}
+
+.login{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.login:hover{
+    color: rgb(71, 5, 71);
+}
+/* MY Trip */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    background-color:#007bff;
+    padding:10px 20px;
+    color:white;
+  }
+  .logo{
+    font-weight:bold;
+    font-size:20px;
+  }
+  .nav-links{
+    list-style-type:none;
+    display:flex;
+    gap:20px;
+  }
+  .nav-links li a{
+    color:white;
+    text-decoration: none;
+    font-weight:bold;
+  }
+  .nav-links li a:hover{
+    text-decoration:underline;
+  }
+
+/*    
+  .top-marquee-banner{
+    width: 100%;
+    background-color: #52c9ee;
+    padding:10px 0;
+    position: relative;
+    top: 0;
+    font-weight: bold;
+  } */
+  /* .top-marquee-banner marquee{
+    font-size: 20px;
+    color:#043464;
+  } */
+  /* .trips-dashboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    gap:40px;
+  } */
+  .flight-marquee{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 70px;
+    color: white;
+  
+  }
+
+  .dashboard-container {
+      text-align: center;
+      margin-top: 250px;
+    }
+    
+    .dashboard-container h2 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+    
+    .button-box-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+    
+    .button-box {
+      width:200px;
+      height: 100px;
+      background-color: #f0f8ff;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+    
+    .button-box:hover {
+      transform: translateY(-5px);
+    }
+    
+    .button-box button {
+      font-size: 18px;
+      padding: 12px 24px;
+      display: flex;
+      background: linear-gradient(to right, #007bff, #00c6ff);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    
+  
+    .button-box button:hover {
+      background: linear-gradient(to right, #0056b3, #0099cc);
+    }
+    

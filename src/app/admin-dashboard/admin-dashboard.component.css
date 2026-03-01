@@ -1,0 +1,28 @@
+.overlay {
+    height: 100%;
+    width: 100%;
+    font-size: 25px;
+    padding-top:250px ;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    top: 400px;
+  }
+  
+  .welcome-text {
+    font-size: 2rem;
+    
+    color: #222;
+    padding: 12px 24px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  .tagline{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+  }

@@ -1,0 +1,52 @@
+.booking-view-container {
+    padding: 20px;
+    max-width: 700px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .booking-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cancel-button {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .cancel-button:hover {
+    background-color: #cc0000;
+  }
+  
+  h2, h3 {
+    text-align: center;
+    color: #333;
+  }
+  
+  ul {
+    padding-left: 20px;
+    color: #555;
+  }
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: rgb(255, 255, 255);
+  border: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+  
+  

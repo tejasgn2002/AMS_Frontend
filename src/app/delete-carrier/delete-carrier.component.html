@@ -1,0 +1,36 @@
+
+<app-admin-navbar></app-admin-navbar>
+<div class="carrier-wrapper">
+    <div class="navbar">
+      <div class="logo">Admin</div>
+    </div>
+  
+    <div class="form-container">
+      <h2>Delete Carrier</h2>
+  
+      <label for="carrierId">Enter Carrier ID to delete:
+        <input
+          type="number"
+          [(ngModel)]="carrierIdToDelete"
+          name="carrierId"
+          required
+        />
+      </label>
+  
+      <button (click)="deleteCarrier()">Delete Carrier</button>
+  
+      <ul *ngIf="carriers.length > 0">
+        <li *ngFor="let carrier of carriers">
+          {{ carrier.carrierId }}: {{ carrier.carrierName }}
+        </li>
+      </ul>
+  
+      <div *ngIf="carriers.length === 0" class="empty">
+        No carriers available.
+      </div>
+    </div>
+  </div>
+
+  
+
+  <app-footer></app-footer>
